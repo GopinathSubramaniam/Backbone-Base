@@ -1,4 +1,4 @@
-package com.book.trip.models;
+package com.book.trip.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,14 +7,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
-@Getter
 @Setter
+@Getter
+@ToString
 @Entity
-public class Country {
-	
+public class FromToPlace {
+
 	@Id
 	private Long id;
-	private String name;
+	
+	private String from;
+	private String to;
 	
 }

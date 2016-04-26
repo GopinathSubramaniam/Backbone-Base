@@ -1,4 +1,4 @@
-package com.book.trip.controllers;
+package com.book.trip.adapter;
 
 import java.util.List;
 
@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.book.trip.models.City;
-import com.book.trip.models.Country;
-import com.book.trip.models.State;
-import com.book.trip.repositories.CityRepository;
-import com.book.trip.repositories.CountryRepository;
-import com.book.trip.repositories.StateRepository;
+import com.book.trip.model.City;
+import com.book.trip.model.Country;
+import com.book.trip.model.State;
+import com.book.trip.repository.CityRepository;
+import com.book.trip.repository.CountryRepository;
+import com.book.trip.repository.StateRepository;
 
 @RestController("/app")
 public class AppAdapter {

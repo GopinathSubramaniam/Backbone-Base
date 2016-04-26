@@ -1,4 +1,4 @@
-package com.book.trip.models;
+package com.book.trip.model;
 
 import javax.persistence.Entity;
 

@@ -1,4 +1,4 @@
-package com.book.trip.controllers;
+package com.book.trip.adapter;
 
 import java.util.Date;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.book.trip.models.Trip;
-import com.book.trip.repositories.TripRepository;
+import com.book.trip.model.Trip;
+import com.book.trip.repository.TripRepository;
 
 @RestController("/trip")
 public class TripAdapter {
