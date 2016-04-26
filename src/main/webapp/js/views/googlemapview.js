@@ -15,7 +15,7 @@ define([
 		initialize: function(){
 			App.initMap();
 			this.render();
-			$('#start').select2({data: App.startPoint});
+			$('#start').select2({data: App.startPoint, width: 'resolve'});
 			$('#end').select2({data: App.endPoint});
 		},
 		render: function(){

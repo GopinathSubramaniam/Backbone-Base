@@ -17,7 +17,7 @@ function getFormData(currentTarget){
 
 
 function initMap(){
-//	$('#footer').addClass('fixed-footer');
+	$('#footer').addClass('fixed-footer');
 	$.getScript('https://maps.googleapis.com/maps/api/js?signed_in=false&callback=initGoogleMapView', function(data, status, jqxhr){
 		console.log('data ::: ', data, 'Status ::: ', status);
 	});
@@ -27,15 +27,13 @@ function initGoogleMapView(){
 	console.log('initMap called');
 	var directionsService = new google.maps.DirectionsService;
 	var directionsDisplay = new google.maps.DirectionsRenderer;
-	var center = new google.maps.LatLng(53.409532, -2.010498);
 
 	var myOptions = {
-		zoom: 1,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		center: center
+		zoom: 7,
+		center: {lat: 18.5203, lng: 73.8567}
 	}
 	
-	var map = new google.maps.Map(document.getElementById('map_go'), myOptions);
+	var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
 	directionsDisplay.setMap(map);
 	
 	/*var onChangeHandler = function() {

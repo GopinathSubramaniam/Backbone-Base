@@ -20,10 +20,6 @@
     border: 0px;
 }
 
-#map {
-  height: 100%;
-}
-
 #floating-panel {
   position: absolute;
   left: 40%;
@@ -55,9 +51,15 @@
    	border-top: solid 3px #c52d2f;
 }
 
-#map_go {
-    height: 70%; 
-    position:absolute;
+
+#map {
+  height: 100%;
 }
 
-.mine {width: 70%;}
+
+html, body, #map-canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
