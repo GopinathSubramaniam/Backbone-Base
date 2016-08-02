@@ -3,4 +3,7 @@
 .project
 .settings
 /bin/
+/.idea/
+/src/main/webapp/node_modules
+*.iml
 
