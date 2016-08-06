@@ -34,8 +34,17 @@ define([
 			var data = this.$el.find('#registerForm').serializeObject(ev.currentTarget);// Fetching form model
 			this.model.set(data); //Setting form object to Backbone Model 
 			this.model.validate(); // Validating model
-			if(this.model.isValid()){
-				console.log('SUCCESS. Data = ', data);
+			if(this.model.isValid() && this.model.attributes.conformPassword === this.model.attributes.password){
+				console.log('SUCCESS. Data = ', this.model.attributes);
+				new RegisterModel().save(this.model.attributes, {
+					success: function(model, respose, options){
+						console.log('After Save Success :::: ', model, respose, options);
+					},
+					error: function(model, xhr, options){
+						console.log('After Save Error:::: ', model, xhr, options);
+					}
+				});
+				$('#registerModal').modal('hide');
 			}else{
 				console.log('FAILED');
 			}

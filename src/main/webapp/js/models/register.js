@@ -2,7 +2,8 @@ define([ 'jquery', 'underscore', 'backbone', 'backboneValidation' ], function($,
 	'use strict';
 
 	var RegisterModel = Backbone.Model.extend({
-		 validation: {
+		url: '/user/',
+	 	validation: {
 			 name: [{
 				 required: true,
 				 msg: 'Please enter name'
@@ -30,7 +31,7 @@ define([ 'jquery', 'underscore', 'backbone', 'backboneValidation' ], function($,
 				 required: true,
 				 msg: 'Please enter password'
 			 },{
-				 minLength: 6,
+				 minLength: 4,
 				 msg: 'Password length should be more than 6'
 			 }]
 		 }
