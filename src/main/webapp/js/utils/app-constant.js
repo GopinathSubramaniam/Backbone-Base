@@ -68,3 +68,16 @@ function calculateAndDisplayRoute(){
 	
 }
 
+var AppConstant = (function(){
+	
+	var validate = function(val){
+		var b = false;
+		if(val !== undefined && val !== '' && val !== null && val !== 'undefined' && val !== 'null')
+			 b = true;
+		return b;
+	}
+	
+	return {
+		validate: validate
+	}
+});

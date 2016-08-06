@@ -20,20 +20,15 @@ public class UserAdapter {
 	
 	@RequestMapping(value="/", method = RequestMethod.POST, produces={"application/json"})
 	public Status save(@RequestBody User user){
-		Status status = new Status();
-		System.out.println("User ::: "+user);
-		if(user != null){
-			status.setStatus("OK");
-			status.setStatusCode(200);
-			status.setStatusMsg("Inserted Successfully");
-			user = userService.save(user);
-			status.setObj(user);
-		}else{
-			status.setStatus("FAILED");
-			status.setStatusCode(500);
-			status.setStatusMsg("Error while inserting record");
-		}
+		Status status = userService.save(user);
 		return status;
 	}
+	
+	@RequestMapping(value="/login", method = RequestMethod.POST, produces={"application/json"})
+	public Status login(@RequestBody User user){
+		 Status status = userService.getByUserNameOrEmailAndPassword(user);
+		 return status;
+	}
+	
 	
 }
