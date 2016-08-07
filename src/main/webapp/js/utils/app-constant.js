@@ -75,7 +75,13 @@ var AppConstant = (function(){
 		if(val !== undefined && val !== '' && val !== null && val !== 'undefined' && val !== 'null')
 			 b = true;
 		return b;
-	}
+	};
+	
+	var getAuthorizationToken = function(){
+		var uname = sessionStorage.getItem('uname');
+		var pass = sessionStorage.getItem('pass');
+		return 'Basic '+btoa(uname+':'+pass);
+	};
 	
 	return {
 		validate: validate

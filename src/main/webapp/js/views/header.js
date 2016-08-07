@@ -59,11 +59,12 @@ define([
 			var appConstant = new AppConstant();
 			if(appConstant.validate(data.email) && appConstant.validate(data.password)){
 				console.log('SUCCESS');	
-				//var userModel = new UserModel();
-				this.model.url = '/user/login';
+				this.model.url = '/app/login';
 				this.model.save(data, {
 					success: function(model, respose, options){
 						console.log('After Save Success :::: ', model, respose, options);
+						window.sessionStorage.setItem('uname', respose.obj.name);
+						window.sessionStorage.setItem('pass', respose.obj.password);
 						window.location.href = '/';
 					},
 					error: function(model, xhr, options){

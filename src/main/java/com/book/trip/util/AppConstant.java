@@ -1,5 +1,8 @@
 package com.book.trip.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.book.trip.model.Status;
 
 public class AppConstant {
@@ -28,5 +31,12 @@ public class AppConstant {
 		statusObj.setStatusMsg(statusMsg);
 		statusObj.setObj(obj);
 		return statusObj;
+	}
+	
+	public static List<String> getAuthFreeUrls(){
+		List<String> urls = new ArrayList<String>();
+		urls.add("/");
+		urls.add("/app");
+		return urls;
 	}
 }

@@ -24,9 +24,9 @@ public class UserAdapter {
 		return status;
 	}
 	
-	@RequestMapping(value="/login", method = RequestMethod.POST, produces={"application/json"})
-	public Status login(@RequestBody User user){
-		 Status status = userService.getByUserNameOrEmailAndPassword(user);
+	@RequestMapping(value="/", method = RequestMethod.GET)
+	public Status getAll(){
+		 Status status = userService.getAll();
 		 return status;
 	}
 	
